@@ -1,13 +1,13 @@
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '2.2.2.RELEASE'
+    id 'org.springframework.boot' version '2.5.4'  // Update to a version that supports Java 17
     id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 }
 
 group 'com.example'
 version '1.0-SNAPSHOT'
 
-sourceCompatibility = '17'  // Change from 1.8 to 17 for JDK 17 compatibility
+sourceCompatibility = '17'  // Ensure this matches the JDK version you're using
 
 repositories {
     mavenCentral()
@@ -15,6 +15,6 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'net.logstash.logback:logstash-logback-encoder:5.2'  // Change compile to implementation
-    testImplementation 'junit:junit:4.12'  // Change testCompile to testImplementation
+    implementation 'net.logstash.logback:logstash-logback-encoder:5.2'
+    testImplementation 'junit:junit:4.12'
 }
