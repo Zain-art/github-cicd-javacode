@@ -19,4 +19,4 @@ jobs:
         distribution: 'temurin'
 
     - name: Build with Gradle Wrapper
-      run: ./gradlew build  # This uses the wrapper and the correct JDK from setup-java
+      run: ./gradlew clean build  # This uses the wrapper and the correct JDK from setup-java
