@@ -1,9 +1,11 @@
-# Use OpenJDK 17 as the base image (alpine version)
-FROM openjdk:17-alpine
+# Use an appropriate base image for your Java application
+FROM openjdk:17-jdk-slim
 
-EXPOSE 8080
-
-COPY ./build/libs/my-app-1.0-SNAPSHOT.jar /usr/app/
+# Set the working directory in the container
 WORKDIR /usr/app
 
-ENTRYPOINT ["java", "-jar", "my-app-1.0-SNAPSHOT.jar"]
+# Copy the JAR file into the container
+COPY ./build/libs/java-app-1.0-SNAPSHOT.jar /usr/app/
+
+# Run the JAR file when the container starts
+CMD ["java", "-jar", "java-app-1.0-SNAPSHOT.jar"]
