@@ -6,3 +6,4 @@ build/
 OpenJDK-23/
 *.zip
 *.tar.gz
+.jar
