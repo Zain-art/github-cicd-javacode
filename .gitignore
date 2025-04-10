@@ -2,7 +2,6 @@
 .idea/*
 .gradle/*
 out/
-build/
 OpenJDK-23/
 *.zip
 *.tar.gz
