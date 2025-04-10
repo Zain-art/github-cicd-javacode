@@ -17,6 +17,8 @@ jobs:
       # Checkout the code
       - name: Checkout code
         uses: actions/checkout@v2
+        with:
+             submodules: 'true'
 
       # Set up JDK 17
       - name: Set up JDK 17
@@ -31,6 +33,11 @@ jobs:
       # Set up Gradle (Optional step: If you want to use a specific version of Gradle)
       - name: Set up Gradle
         uses: gradle/wrapper-validation-action@v1
+      - name: Make gradlew executable
+        run: chmod +x ./gradlew
+      
+   
+        
 
       # Build the project with Gradle
       - name: Build with Gradle
